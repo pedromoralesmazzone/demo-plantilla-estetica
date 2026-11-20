@@ -1,17 +1,17 @@
 // =====================================================================
 //  DATOS DEL LOCAL · plantilla para peluquerías, barberías y estética
 //  Para un cliente nuevo: copiá la carpeta, cambiá SOLO este archivo y subí.
-//  Este ejemplo es FICTICIO (nombre, equipo, precios y fotos de stock).
+//  Este ejemplo es GENÉRICO ("Tu Marca"): precios de ejemplo y fotos de stock.
 // =====================================================================
 const U = (id, w=900) => id.startsWith("photo-") ? `https://images.unsplash.com/${id}?w=${w}&q=75&auto=format&fit=crop` : id;
 
 window.DATOS = {
   tipo: "turnos",                  // "turnos" = reservar turno por WhatsApp (sin carrito)
-  nombre: "Estudio Bruma",
+  nombre: "Tu Marca",
   rubro: "Peluquería y estética",
-  barrio: "Pocitos",
-  logo: "B",
-  demo: "Plantilla de ejemplo · datos ficticios", // "" para la versión final
+  barrio: "tu barrio",
+  logo: "TM",
+  demo: "Ejemplo · acá va el nombre de tu salón", // "" para la versión final
 
   textos: { carta:"Servicios", local:"El salón", destacadas:"Equipo", reservar:"Reservar", reservarLargo:"Reservar turno", reservas:"Turnos", accion:"Reservar" },
 
@@ -22,9 +22,9 @@ window.DATOS = {
 
   contacto: {
     whatsapp: "",                    // número real del cliente (598...). Vacío = WhatsApp deja elegir contacto
-    telefono: "(teléfono del salón)",
+    telefono: "(tu teléfono)",
     tel: "",
-    direccion: "(dirección del salón), Pocitos · Montevideo",
+    direccion: "(tu dirección) · Montevideo",
     mapa: "https://www.google.com/maps",
     instagram: "",
   },
@@ -43,14 +43,14 @@ window.DATOS = {
   insignia: { valor: "24/7", texto: "reservá tu turno cuando quieras" },
   presentacion: {
     numero: "#01",
-    titulo: "Tu salón de confianza",
+    titulo: "Tu salón, con tu marca",
     texto: "Cortes, color, uñas y maquillaje con atención personalizada. Elegí el servicio, el día y la hora, y te confirmamos por WhatsApp.",
   },
   // Equipo: nombre, rol, foto y 4 palabras grandes de fondo.
   carrusel: [
-    { nombre: "Sofía", rol: "Colorista", foto: U("photo-1761839256791-6a93f89fb8b0", 700), palabras: ["Color", "que", "te", "queda"] },
-    { nombre: "Martina", rol: "Estilista", foto: U("photo-1761839256840-7780a45b85dc", 700), palabras: ["Cortes", "con", "estilo", "propio"] },
-    { nombre: "Lucas", rol: "Barbero", foto: U("photo-1621605815971-fbc98d665033", 700), palabras: ["Barba", "y", "corte", "prolijo"] },
+    { nombre: "Tu colorista", rol: "Acá va su nombre", foto: U("photo-1761839256791-6a93f89fb8b0", 700), palabras: ["Color", "que", "te", "queda"] },
+    { nombre: "Tu estilista", rol: "Acá va su nombre", foto: U("photo-1761839256840-7780a45b85dc", 700), palabras: ["Cortes", "con", "estilo", "propio"] },
+    { nombre: "Tu barbero", rol: "Acá va su nombre", foto: U("photo-1621605815971-fbc98d665033", 700), palabras: ["Barba", "y", "corte", "prolijo"] },
   ],
 
   cartaTitulo: ["Elegí tu", "servicio"],
