@@ -630,7 +630,7 @@ $("#layers").innerHTML = `
 </div>
 
 <nav class="mbar" id="mbar" aria-label="Accesos rápidos">
-  <a href="#carta" data-go>${TX.carta.replace(/^La /,"")}</a>
+  <a href="#carta" data-go>${TX.carta.replace(/^La (.)/,(m,c)=>c.toUpperCase())}</a>
   ${F.pedidos ? (F.reservas ? `<button data-open="reserva">${TX.reservar}</button>` : `<a href="tel:${C.tel}">Llamar</a>`) : `<a href="tel:${C.tel}">Llamar</a>`}
   ${F.pedidos ? `<button class="go" data-open="pedido">Mi pedido <span class="badge" data-n="0">0</span></button>`
     : F.reservas ? `<button class="go" data-open="reserva">${TX.reservar}</button>` : `<a class="go" href="#local" data-go>Cómo llegar</a>`}
