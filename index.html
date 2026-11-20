@@ -846,7 +846,8 @@ $("#qm").onclick = () => { sel.qty = Math.max(1, sel.qty-1); renderDetalle(); };
 $("#qp").onclick = () => { sel.qty = Math.min(30, sel.qty+1); renderDetalle(); };
 $("#dAdd").onclick = () => {
   const { it, qty, pick } = sel;
-  addToCart(`${it.cat==="Pizzetas"?"Pizzeta ":""}${it.n}${pick.length?` (${pick.join(", ")})`:""}`, it.p, qty);
+  const pre = it.cat==="Pizzetas" && !/pizzeta|gusto/i.test(it.n) ? "Pizzeta " : "";
+  addToCart(`${pre}${it.n}${pick.length?` (${pick.join(", ")})`:""}`, it.p, qty);
   closeModal($("#m-detalle"));
 };
 
